@@ -20,7 +20,7 @@ const EXT_TO_MIME = {
  */
 export function embedLocalImages(html, mdDir) {
   return html.replace(/<img([^>]*)\ssrc="([^"]+)"([^>]*)>/g, (match, before, src, after) => {
-    if (/^(https?:||\/\/)/i.test(src)) {
+    if (/^(https?:\/\/|\/\/)/i.test(src)) {
       return match; // remote or already data URI
     }
     const absPath = path.isAbsolute(src) ? src : path.resolve(mdDir, src);
