@@ -1,8 +1,11 @@
 {
-  "name": "md2img",
+  "name": "@mailzwj/md2img",
   "version": "1.0.0",
   "description": "Convert Markdown files to images with GitHub theme",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "md2img": "./bin/md2img.js"
   },
