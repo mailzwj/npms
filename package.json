@@ -1,0 +1,22 @@
+{
+  "name": "md2img",
+  "version": "1.0.0",
+  "description": "Convert Markdown files to images with GitHub theme",
+  "type": "module",
+  "bin": {
+    "md2img": "./bin/md2img.js"
+  },
+  "scripts": {
+    "test": "PUPPETEER_CACHE_DIR=/private/tmp/claude-501/puppeteer-cache node bin/md2img.js test/sample.md -o test/output.png",
+    "test:dark": "PUPPETEER_CACHE_DIR=/private/tmp/claude-501/puppeteer-cache node bin/md2img.js test/sample.md -o test/output-dark.png --theme dark"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "github-markdown-css": "^5.8.1",
+    "highlight.js": "^11.11.1",
+    "katex": "^0.16.21",
+    "marked": "^15.0.12",
+    "marked-highlight": "^2.2.1",
+    "puppeteer": "^24.6.0"
+  }
+}
